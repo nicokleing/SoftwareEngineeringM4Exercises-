@@ -1,0 +1,34 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.container {
+    position: relative;
+    width: 100px;
+    height: 200px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    animation: slide 4s infinite;
+}
+
+@keyframes slide {
+    0%, 100% {
+        top: 0;
+        background-color: red;
+    }
+    50% {
+        top: 100px;
+        background-color: blue;
+    }
+}

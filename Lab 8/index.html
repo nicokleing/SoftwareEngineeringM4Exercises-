@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment.js Examples</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .result {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Moment.js Examples</h1>
+        
+        <!-- Number of days between birthdate and current date -->
+        <div id="days-difference" class="result"></div>
+
+        <!-- Number of years, months, and days between birthdate and current date -->
+        <div id="years-months-days" class="result"></div>
+        
+        <!-- Closest date to current date -->
+        <div id="closest-date-result" class="result"></div>
+        
+        <!-- Compare two dates -->
+        <div id="comparison-result" class="result"></div>
+        
+        <!-- Current time in London -->
+        <div id="current-time-london" class="result"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+    <script>
+        // 1.js: Calculate the number of days between your birthdate and the current date
+        const birthdate1 = moment('1983-05-08');
+        const currentDate1 = moment();
+        const daysDifference = currentDate1.diff(birthdate1, 'days');
+        document.getElementById('days-difference').innerText = `Number of days between birthdate and current date: ${daysDifference}`;
+
+        // 2.js: Display the number of years, months, and days between your birthdate and the current date
+        const birthdate2 = moment('1983-05-08');
+        const currentDate2 = moment();
+        const duration = moment.duration(currentDate2.diff(birthdate2));
+        const years = duration.years();
+        const months = duration.months();
+        const days = duration.days();
+        document.getElementById('years-months-days').innerText = `${years} years, ${months} months, and ${days} days`;
+
+        // 3.js: Given two dates, display the date closest to the current date
+        const date1 = moment('2024-05-01');
+        const date2 = moment('2024-05-15');
+        const currentDate3 = moment();
+        const diff1 = Math.abs(currentDate3.diff(date1));
+        const diff2 = Math.abs(currentDate3.diff(date2));
+        const closestDate = diff1 < diff2 ? date1 : date2;
+        document.getElementById('closest-date-result').innerText = `The date closest to the current date is: ${closestDate.format('YYYY-MM-DD')}`;
+
+        // 4.js: Given two dates, display whether the first date is before or after the second date
+        const date1Comp = moment('2024-05-01');
+        const date2Comp = moment('2024-05-15');
+        let comparisonResult = '';
+        if (date1Comp.isBefore(date2Comp)) {
+            comparisonResult = 'The first date is before the second date.';
+        } else if (date1Comp.isAfter(date2Comp)) {
+            comparisonResult = 'The first date is after the second date.';
+        } else {
+            comparisonResult = 'Both dates are the same.';
+        }
+        document.getElementById('comparison-result').innerText = comparisonResult;
+
+        // 5.js: Display the current time in London
+        const currentTimeInLondon = moment().tz('Europe/London').format('HH:mm:ss');
+        document.getElementById('current-time-london').innerText = `The current time in London is: ${currentTimeInLondon}`;
+    </script>
+</body>
+</html>
