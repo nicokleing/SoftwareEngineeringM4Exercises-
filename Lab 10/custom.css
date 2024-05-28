@@ -1,0 +1,401 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: white; /* Cambiar el fondo del body a blanco */
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h4 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+header {
+    padding: 20px 0;
+    background: linear-gradient(to right, #101010, #2d3f6d, rgb(54, 147, 158), rgb(0, 229, 255));
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+@media (min-width: 750px) {
+    header {
+        text-align: left;
+    }
+}
+
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: rgb(33, 31, 31);
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+    border-radius: 10px; /* Añadir bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra para el efecto flotante */
+    border: 1px solid #ddd; /* Añadir un borde ligero */
+}
+
+.submenu:hover #carrito {
+    display: block;
+}
+
+#carrito table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#carrito th, #carrito td {
+    padding: 10px;
+    text-align: left;
+}
+
+#carrito th {
+    background-color: #b7bbca;
+    border-bottom: 1px solid #dfc3c3;
+}
+
+#carrito td {
+    border-bottom: 1px solid #eac1c1;
+}
+
+#carrito p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#vaciar-carrito {
+    background-color: #c66161; /* Cambiar el color a un rojo más suave */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#vaciar-carrito:hover {
+    background-color: #e60000; /* Cambiar el color al pasar el mouse */
+}
+
+ul {
+    list-style: none;
+}
+
+#hero {
+    background-image: url('img/pexels-pixabay-264502.jpg');
+    height: 450px;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px; /* Ajustar el relleno superior para evitar la superposición con el encabezado fijo */
+}
+
+#hero h2, #hero p {
+    display: inline-block;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.custom-select-width {
+    max-width: 300px;
+    display: block;
+}
+
+#encabezado {
+    margin: 30px 0;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+#categorySelect {
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.barra {
+    padding: 100px 0;
+    background: linear-gradient(to right, #2b292a 0%, #ebe9e9 100%);
+}
+
+.barra p {
+    margin: 0;
+    color: white;
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px; /* Añadir border-radius para hacer los bordes redondeados */
+}
+
+.btn-small i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+.barra .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.barra .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.barra .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra {
+    padding: 5px 0; /* Reduce the padding to make the bar smaller */
+    background: linear-gradient(to right, #2b292a 0%, #ebe9e9 100%);
+}
+
+.barra p {
+    margin: 0;
+    color: white;
+}
+
+.icono {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px;
+    background-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+@media (min-width: 750px) {
+    .icono {
+        margin-bottom: 0;
+    }
+}
+
+.icono1 {
+    background-image: url('../img/icono1.png');
+}
+
+.icono2 {
+    background-image: url('../img/icono2.png');
+}
+
+.icono3 {
+    background-image: url('../img/icono3.png');
+}
+
+#lista-cursos .row {
+    margin-bottom: 20px;
+}
+
+.agregar-carrito {
+    margin-top: 20px;
+    font-size: 1.4rem; /* Aumentar el tamaño de la fuente */
+    padding: 15px 30px; /* Aumentar el tamaño del botón */
+    background-color: #007bff; /* Cambiar el color de fondo a azul */
+    border: none; /* Eliminar el borde predeterminado */
+    color: white; /* Cambiar el color del texto a blanco */
+    cursor: pointer; /* Cambiar el cursor a pointer */
+    border-radius: 5px; /* Añadir bordes redondeados */
+    width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+    display: block; /* Asegurar que el botón sea un bloque para ocupar todo el ancho */
+    text-align: center; /* Centrar el texto */
+}
+
+.agregar-carrito:hover {
+    background-color: #6c757d; /* Cambiar el color de fondo en hover a gris */
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    background: white;
+    width: 300px;
+    height: 500px;
+    margin: auto;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-card {
+    padding: 10px 20px;
+}
+
+.info-card p, .card h5 {
+    margin-bottom: 5px;
+}
+
+.info-card .precio {
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.info-card .precio span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.footer {
+    margin-top: 40px;
+    border-top: 1px solid #aaaaaa;
+    padding-top: 40px;
+    background-image: url('img/pexels-pixabay-264502.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.footer .menu a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.816);
+    padding: 5px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.notification-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    z-index: 1000;
+}
+
+.notification {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+
+/* Estilos para el formulario de contacto */
+#contact-form {
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+#contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#contact-form .form-control {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+#contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
